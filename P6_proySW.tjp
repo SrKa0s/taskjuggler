@@ -315,6 +315,10 @@ textreport frame "" {
     title "Resource Graph"
     center '<[report id="resourceGraph"]>'
   }
+  textreport info "Informe planificacion" {
+  formats html
+  center '<[report id="inform"]>'
+  }
 }
 
 # A traditional Gantt chart with a project overview.
@@ -333,10 +337,7 @@ taskreport overview "" {
   caption 'All effort values are in man days.'
 }
 
-textreport info "Informe planificacion" {
-  formats html
-  center '<[report id="inform"]>'
-}
+
 
 # A traditional Gantt chart with a project overview.
 taskreport inform "" {
