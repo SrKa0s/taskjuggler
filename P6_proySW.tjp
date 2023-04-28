@@ -151,17 +151,17 @@ task WMGame "Web & Mobile Game" {
     purge chargeset
     chargeset back
     responsible dev1
-    depends WMGame.tback.tbackDev
+    depends WMGame.tback.tBEd
     task tDBd "Deploy Back End" {
       effort 2d
       allocate dev1
-      depends WMGame.tback.tbackDev
+      depends WMGame.tback.tBEd
     }
 
     task tDBdb "Deploy Back End Database" {
       effort 2d
       allocate dev1
-      depends WMGame.tback.tbackDev
+      depends WMGame.tback.tBEd
     }
       
   }
