@@ -119,6 +119,52 @@ task WMGame "Web & Mobile Game" {
     }
   }
 
+  task tAndroidF "Android Front End" {
+    purge chargeset
+    chargeset aFront
+    responsible dev3
+    depends WMGame.tback.tBEd
+    task tAGUId "Android GUI Design" {
+      effort 9d
+      actual:effort 15d
+      allocate dev3
+      journalentry 2023-04-11 "Problems with the GUI design tool" {
+        author dev3
+        alert yellow
+        summary "The tool used for the GUI design has given me a lot of problems. I recommend to look for other one."
+      }
+    }
+    task tAFEc "Android Front End Construction" {
+      effort 15d
+      allocate dev2, dev3
+      depends WMGame.tAndroidF.tAGUId
+    }
+    task tAFEt "Web Front End Test" {
+      effort 6d
+      allocate dev1
+      depends WMGame.tAndroidF.tAFEc
+    }    
+  }
+
+  task tDeployB "Deploy Back End" {
+    purge chargeset
+    chargeset back
+    responsible dev1
+    depends WMGame.tback.tbackDev
+    task tDBd "Deploy Back End" {
+      effort 2d
+      allocate dev1
+      depends WMGame.tback.tbackDev
+    }
+
+    task tDBdb "Deploy Back End Database" {
+      effort 2d
+      allocate dev1
+      depends WMGame.tback.tbackDev
+    }
+      
+  }
+
   task twebF "Web Front End" {
     purge chargeset
     chargeset wFront
