@@ -193,11 +193,11 @@ task WMGame "Web & Mobile Game" {
   }
 
   task ttest "Accpetance tests" {
+      deadline 2023-06-01
       effort 10d
       allocate boss
       allocate dev2
       actual:effort 15d
-      deadline 1-6-2023
       journalentry 2023-04-13 "Problems with the planned dates" {
         author boss
         alert red
