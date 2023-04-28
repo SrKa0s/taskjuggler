@@ -70,7 +70,7 @@ resource dev3 "Peter Green" {
 }
 
 shift MonFri4h "monday - friday 4h" {
-  workinghours mon - fri "08:00 - 12:00"
+  workinghours mon - fri 08:00-12:00
 }
 
 resource pablo "Pablo Lacueva" {
