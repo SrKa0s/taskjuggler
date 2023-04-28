@@ -140,7 +140,7 @@ task WMGame "Web & Mobile Game" {
       allocate dev2, dev3
       depends WMGame.tAndroidF.tAGUId
     }
-    task tAFEt "Web Front End Test" {
+    task tAFEt "Android Front End Test" {
       effort 6d
       allocate dev1
       depends WMGame.tAndroidF.tAFEc
@@ -197,6 +197,7 @@ task WMGame "Web & Mobile Game" {
       allocate boss
       allocate dev2
       actual:effort 15d
+      deadline 1-6-2023
       journalentry 2023-04-13 "Problems with the planned dates" {
         author boss
         alert red
