@@ -69,7 +69,7 @@ resource dev3 "Peter Green" {
   email "kkk@unizar.es"
 }
 
-shift MonFri4h {
+shift MonFri4h "monday - friday 4h" {
   workinghours mon - fri "08:00 - 12:00"
 }
 
